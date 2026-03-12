@@ -1,0 +1,23 @@
+<h3>CSV Folders</h3>
+
+<table>
+
+<tr>
+<th>Folder</th>
+<th>Start</th>
+<th>End</th>
+<th>Days</th>
+<th>Cached</th>
+</tr>
+
+<tr *ngFor="let f of folders">
+
+<td>{{f.folder}}</td>
+<td>{{f.start}}</td>
+<td>{{f.end}}</td>
+<td>{{f.days}}</td>
+<td>{{f.cached}}</td>
+
+</tr>
+
+</table>

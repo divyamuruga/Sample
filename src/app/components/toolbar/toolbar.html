@@ -1,0 +1,29 @@
+<div class="toolbar">
+
+<label>Rollup Type</label>
+<select [(ngModel)]="rollupType">
+<option>Daily</option>
+<option>Weekly</option>
+<option>Monthly</option>
+</select>
+
+<label>Date Range</label>
+<input type="date" [(ngModel)]="startDate">
+<input type="date" [(ngModel)]="endDate">
+
+<label>Service Bucket</label>
+<select [(ngModel)]="serviceBucket">
+<option>All</option>
+<option>Primary</option>
+<option>Secondary</option>
+</select>
+
+<label>Zoom To</label>
+<select [(ngModel)]="zoomTo">
+<option>Region</option>
+<option>Selected Route</option>
+</select>
+
+<button (click)="rerollup()">Re-Rollup</button>
+
+</div>

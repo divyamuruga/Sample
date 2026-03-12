@@ -1,0 +1,44 @@
+<h3>Filters</h3>
+
+<label>
+<input type="checkbox" [(ngModel)]="showCells">
+Show Cells
+</label>
+
+<label>
+<input type="checkbox" [(ngModel)]="showStops">
+Show Stops
+</label>
+
+<label>
+<input type="checkbox" [(ngModel)]="togetherness">
+Togetherness
+</label>
+
+<h4>Cell Labels</h4>
+
+<label>
+<input type="radio" name="label" value="Full" [(ngModel)]="cellLabel">
+Full
+</label>
+
+<label>
+<input type="radio" name="label" value="Compact" [(ngModel)]="cellLabel">
+Compact
+</label>
+
+<label>
+<input type="radio" name="label" value="None" [(ngModel)]="cellLabel">
+None
+</label>
+
+<h4>Thresholds</h4>
+
+<label>1 Route</label>
+<input type="number" [(ngModel)]="threshold1">
+
+<label>2 Routes</label>
+<input type="number" [(ngModel)]="threshold2">
+
+<label>3 Routes</label>
+<input type="number" [(ngModel)]="threshold3">
