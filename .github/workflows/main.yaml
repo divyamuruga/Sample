@@ -1,0 +1,27 @@
+name: Pull Windows Docker Image and Save as Artifact
+ 
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  pull-docker-image:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      # Step 3: Pull the Windows Docker image
+      - name: Pull Rocky Linux Docker Image
+        run: |
+          docker pull ghcr.io/valhalla/valhalla-scripted:latest
+      # Step 4: Save the Docker image to a .tar file
+      - name: Save Docker Image as TAR
+        run: |
+          docker save -o valhalla.tar valhalla-scripted:latest
+ 
+      # Step 5: Upload the .tar file as an artifact
+      - name: Upload Docker Image Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: valhalla
+          path: valhalla.tar
